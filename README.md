@@ -1,81 +1,81 @@
-# R语言机器学习基础模型模板集合
+# R Machine Learning Basic Model Templates
 
-这个仓库包含了使用R语言实现的各种机器学习模型的基础模板。这些模板提供了从数据预处理、特征选择到模型训练和评估的完整流程，适合机器学习初学者和专业人士参考使用。
+This repository contains a collection of basic templates for various machine learning models implemented in R. These templates provide complete workflows from data preprocessing and feature selection to model training and evaluation, suitable for both beginners and professionals in the field of machine learning.
 
-## 模板内容
+## Contents
 
-### 1. 线性回归模型 (003_linear_regression_model.R)
-- 使用`state.x77`数据集预测谋杀率
-- 包含变量选择(forward/backward/both)方法比较
-- 相关性分析与多重共线性检查
-- 交叉验证模型评估
+### 1. Linear Regression Model (003_linear_regression_model.R)
+- Uses the `state.x77` dataset to predict murder rates
+- Includes comparison of variable selection methods (forward/backward/both)
+- Correlation analysis and multicollinearity checks
+- Cross-validation model evaluation
 
-### 2. 购物篮分析 (004_market_basket_analysis.R)
-- 使用`arules`和`arulesViz`包进行关联规则挖掘
-- 包含支持度、置信度和提升度等关键指标计算
-- 多种可视化方法展示关联规则
-- 规则筛选与排序方法
+### 2. Market Basket Analysis (004_market_basket_analysis.R)
+- Utilizes `arules` and `arulesViz` packages for association rule mining
+- Includes calculation of key metrics: support, confidence, and lift
+- Multiple visualization methods for association rules
+- Rule filtering and sorting techniques
 
-### 3. 乳腺癌预测 (005_breast_cancer_prediction.R)
-- 基于Boruta算法的特征选择
-- 随机森林与XGBoost模型对比
-- 交叉验证性能评估
-- 混淆矩阵模型验证
+### 3. Breast Cancer Prediction (005_breast_cancer_prediction.R)
+- Feature selection using Boruta algorithm
+- Comparison between Random Forest and XGBoost models
+- Cross-validation performance evaluation
+- Model validation using confusion matrix
 
-### 4. 支持向量机 (006_support_vector_machine.R)
-- 适用于高维低样本量数据的SVM模型
-- 核函数选择(Radial基函数)
-- 特征选择与数据预处理
-- 超参数优化与交叉验证
+### 4. Support Vector Machine (006_support_vector_machine.R)
+- SVM model suitable for high-dimensional, low-sample data
+- Kernel function selection (Radial basis function)
+- Feature selection and data preprocessing
+- Hyperparameter optimization and cross-validation
 
-### 5. 神经网络 (007_neural_network.R)
-- 基础神经网络实现
-- 适用于分类与回归问题
-- 特征选择与数据标准化
-- 模型评估与调优
+### 5. Neural Network (007_neural_network.R)
+- Basic neural network implementation
+- Suitable for both classification and regression problems
+- Feature selection and data standardization
+- Model evaluation and tuning
 
-### 6. 卷积神经网络 (008_convolutional_neural_network.R)
-- 使用Keras在R中实现CNN
-- 详细的CNN架构设计(卷积层、池化层、全连接层)
-- MNIST数据集图像分类案例
-- 包含模型保存、加载与评估
+### 6. Convolutional Neural Network (008_convolutional_neural_network.R)
+- CNN implementation using Keras in R
+- Detailed CNN architecture design (convolutional layers, pooling layers, fully connected layers)
+- Image classification case study using MNIST dataset
+- Model saving, loading, and evaluation
 
-## 技术要点
+## Technical Highlights
 
-- **特征选择**：主要使用Boruta算法
-- **模型验证**：采用K折交叉验证
-- **模型评估**：准确率、混淆矩阵等多种指标
-- **超参数优化**：网格搜索与自动参数调优
-- **预处理**：标准化、中心化等数据预处理方法
+- **Feature Selection**: Primarily using Boruta algorithm
+- **Model Validation**: K-fold cross-validation
+- **Model Evaluation**: Multiple metrics including accuracy and confusion matrix
+- **Hyperparameter Optimization**: Grid search and automatic parameter tuning
+- **Preprocessing**: Standardization, centering, and other data preprocessing methods
 
-## 使用方法
+## Usage Instructions
 
-1. 克隆仓库到本地
+1. Clone the repository
 ```
 git clone https://github.com/FROST-web3/machine_learning.git
 ```
 
-2. 确保安装了必要的R包
+2. Ensure necessary R packages are installed
 ```R
-# 安装基础包
+# Install basic packages
 install.packages(c("caret", "e1071", "Boruta", "kernlab", "corrplot", "arules", "arulesViz"))
 
-# 神经网络相关包
+# Neural network related packages
 install.packages(c("nnet", "keras"))
 ```
 
-3. 根据需要修改和运行相应的脚本
+3. Modify and run scripts as needed
 
-## 注意事项
+## Important Notes
 
-- 部分脚本需要特定数据集，请提前准备或根据注释修改数据源
-- CNN模型需要先安装TensorFlow及Keras环境
-- 模型训练可能需要较长时间，特别是对大数据集进行交叉验证时
+- Some scripts require specific datasets; please prepare or modify data sources according to comments
+- CNN model requires TensorFlow and Keras environments
+- Model training may take a considerable amount of time, especially when performing cross-validation on large datasets
 
-## 贡献
+## Contributions
 
-欢迎通过Issue或Pull Request提出改进建议或贡献代码。
+Improvements and code contributions are welcome through Issues or Pull Requests.
 
-## 许可证
+## License
 
-本项目采用MIT许可证 - 详情请参见[LICENSE](LICENSE)文件。
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
